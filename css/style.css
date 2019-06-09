@@ -38,6 +38,7 @@ html,body{
 	width: 629px;
 	height:603px; 
 	border: 1px solid #B7B8BB;
+	background-color: #FFFFFF;
 }
 .selectedV{
 	background-image: url(../image/canvas/selected/vertical-selected.png) !important;
@@ -66,4 +67,5 @@ html,body{
 	color: #647295;
 	border-radius: 5%;
 	margin-left: 5px;
+	border: 0px;
 }
