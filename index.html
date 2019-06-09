@@ -13,6 +13,7 @@
 				<div id="canvas__horisontal" class="canvas canvas__1"></div>
 				<div id="canvas__square" class="canvas canvas__2"></div>
 				<div id="button__headline" class="button__headline">Headline</div>
+				<div id="button__main_text" class="button__main_text">Main text</div>
 			</div>
 			<div contenteditable="true" id="editor" class="editor-conteiner__editor">
 			</div>	
@@ -25,6 +26,7 @@
 	let editor = document.getElementById('editor');
 
 	let buttonHeadline = document.getElementById('button__headline');
+	let buttonMainText = document.getElementById('button__main_text');
 
 	selectedVertical.classList.add('selectedV');
 
@@ -35,7 +37,6 @@
 		document.getElementById('editor').style.width = '629px';
 		document.getElementById('editor').style.height = '603px';
 	}
-
 	selectedhorisontal.onclick = function(){
 		selectedhorisontal.classList.add('selectedH');
 		selectedVertical.classList.remove('selectedV');
@@ -50,12 +51,13 @@
 		document.getElementById('editor').style.width = '629px';
 		document.getElementById('editor').style.height = '551px';
 	}
+
+
 	buttonHeadline.onclick = function(){
-		let headline = document.createElement('div');
-		document.getElementById('editor').appendChild(headline);
-  		let att = document.createAttribute("contenteditable");
-  		att.value = "democlass";
-  		headline.setAttributeNode(att);
+		document.getElementById('editor').style.fontSize = '50px';
+	}
+	buttonMainText.onclick = function(){
+		document.getElementById('editor').style.fontSize = '25px';
 	}
 
 
