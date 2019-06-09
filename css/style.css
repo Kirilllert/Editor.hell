@@ -1,0 +1,69 @@
+html,body{
+	height: 100%;
+	margin: 0;
+	background-color: #F4F5FD;
+}
+.all-conteiner{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.editor-conteiner__canvas{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+
+.canvas{
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	background-repeat: no-repeat;
+}
+.canvas__1{
+	background-image: url(../image/canvas/just/horisontal.png);
+}
+.canvas__2{
+	background-image: url(../image/canvas/just/square.png);
+}
+.canvas__3{
+	background-image: url(../image/canvas/just/vertical.png);
+}
+
+.editor-conteiner__editor{
+	width: 629px;
+	height:603px; 
+	border: 1px solid #B7B8BB;
+}
+.selectedV{
+	background-image: url(../image/canvas/selected/vertical-selected.png) !important;
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	background-repeat: no-repeat;
+}
+.selectedH{
+	background-image: url(../image/canvas/selected/horisontal-selected.png) !important;
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	background-repeat: no-repeat;
+}
+.selectedS{
+	background-image: url(../image/canvas/selected/square-selected.png) !important;
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	background-repeat: no-repeat;
+}
+.button__headline{
+	background-color: #D6E5F9;
+	padding: 5px;
+	color: #647295;
+	border-radius: 5%;
+
+}

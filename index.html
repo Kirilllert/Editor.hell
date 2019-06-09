@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor.hell</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="js/scripts.js">
+</head>
+<body>
+	<div class="all-conteiner">
+		<div class="all-conteiner__editor-conteiner">
+			<div class="editor-conteiner__canvas">
+				<div id="canvas__vertical" class="canvas canvas__3"></div>
+				<div id="canvas__horisontal" class="canvas canvas__1"></div>
+				<div id="canvas__square" class="canvas canvas__2"></div>
+				<div id="button__headline" class="button__headline">Headline</div>
+			</div>
+			<div contenteditable="true" id="editor" class="editor-conteiner__editor">
+			</div>	
+		</div>
+	</div>
+<script type="text/javascript">
+	let selectedVertical = document.getElementById('canvas__vertical');
+	let selectedhorisontal = document.getElementById('canvas__horisontal');
+	let selectedSquare = document.getElementById('canvas__square');
+	let editor = document.getElementById('editor');
+
+	let buttonHeadline = document.getElementById('button__headline');
+
+	selectedVertical.classList.add('selectedV');
+
+	selectedVertical.onclick = function(){
+		selectedVertical.classList.add('selectedV');
+		selectedhorisontal.classList.remove('selectedH');
+		selectedSquare.classList.remove('selectedS');
+		document.getElementById('editor').style.width = '629px';
+		document.getElementById('editor').style.height = '603px';
+	}
+
+	selectedhorisontal.onclick = function(){
+		selectedhorisontal.classList.add('selectedH');
+		selectedVertical.classList.remove('selectedV');
+		selectedSquare.classList.remove('selectedS');
+		document.getElementById('editor').style.width = '650px';
+		document.getElementById('editor').style.height = '411px';
+	}
+	selectedSquare.onclick = function(){
+		selectedSquare.classList.add('selectedS');
+		selectedVertical.classList.remove('selectedV');
+		selectedhorisontal.classList.remove('selectedH');
+		document.getElementById('editor').style.width = '629px';
+		document.getElementById('editor').style.height = '551px';
+	}
+	buttonHeadline.onclick = function(){
+		let headline = document.createElement('div');
+		document.getElementById('editor').appendChild(headline);
+  		let att = document.createAttribute("contenteditable");
+  		att.value = "democlass";
+  		headline.setAttributeNode(att);
+	}
+
+
+</script>
+</body>
+</html>
