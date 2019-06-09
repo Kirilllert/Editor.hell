@@ -39,6 +39,7 @@ html,body{
 	height:603px; 
 	border: 1px solid #B7B8BB;
 	background-color: #FFFFFF;
+	font-size: 25px;
 }
 .selectedV{
 	background-image: url(../image/canvas/selected/vertical-selected.png) !important;
@@ -68,4 +69,9 @@ html,body{
 	border-radius: 5%;
 	margin-left: 5px;
 	border: 0px;
+}
+.buttonOn{
+	background-color: #3C93F5;
+	font-weight: bold;
+	color: white;
 }

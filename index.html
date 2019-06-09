@@ -4,6 +4,9 @@
 	<title>Editor.hell</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="js/scripts.js">
+	<script type="text/javascript">
+		
+	</script>
 </head>
 <body>
 	<div class="all-conteiner">
@@ -13,8 +16,9 @@
 				<div id="canvas__horisontal" class="canvas canvas__1"></div>
 				<div id="canvas__square" class="canvas canvas__2"></div>
  				<div id="wysiwyg" style="margin: 20px;">
- 				 <input type="button" value="Headline" class="button__headline" onclick="document.execCommand('fontSize', false, '30px');" style="font-weight: bold;">
- 				 <input type="button" value="Main text" class="button__headline" onclick="document.execCommand('fontSize', false, '20pt');" style="font-weight: bold;">
+ 					<input type="button" value="Headline" id="button__headline" class="button__headline">
+ 				 	<input type="button" value="Main text" id="button__main_text" class="button__headline">
+ 				 	
  				</div>
 			</div>
 			<div contenteditable="true" id="editor" class="editor-conteiner__editor">
@@ -29,6 +33,7 @@
 
 	let buttonHeadline = document.getElementById('button__headline');
 	let buttonMainText = document.getElementById('button__main_text');
+
 
 	selectedVertical.classList.add('selectedV');
 
@@ -54,6 +59,16 @@
 		document.getElementById('editor').style.height = '551px';
 	}
 
+	buttonMainText.onclick = function(){
+		document.getElementById('button__main_text').classList.add('buttonOn');
+		document.getElementById('button__headline').classList.remove('buttonOn');
+		document.execCommand('fontSize', false, '5');
+	}
+	buttonHeadline.onclick = function(){
+		document.getElementById('button__main_text').classList.remove('buttonOn');
+		document.getElementById('button__headline').classList.add('buttonOn');
+		document.execCommand('fontSize', false, '7');
+	}
 		
 
 </script>
