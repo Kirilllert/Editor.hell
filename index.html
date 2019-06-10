@@ -19,10 +19,12 @@
  				<div id="wysiwyg" style="margin: 20px;">
  					<input type="button" value="Headline" id="button__headline" class="button__headline">
  				 	<input type="button" value="Main text" id="button__main_text" class="button__headline">
+ 				 	<input type="button" class="button__headline" id="dwn-btn" value="Download"/>
  				</div>
  				<div class="align align__1"></div>
  				<div class="align align__2"></div>
  				<div class="align align__3"></div>
+
 			</div>
 			<div contenteditable="true" id="editor" class="editor-conteiner__editor">
 			</div>	
@@ -73,6 +75,38 @@
 		document.execCommand('fontSize', false, '7');
 	}
 		
+
+		function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dwn-btn").addEventListener("click", function(){
+    // Generate download of hello.txt file with some content
+    var text = document.getElementById("editor").textContent;
+    buttonMainText.onclick = function(){
+		document.getElementById('button__main_text').classList.add('buttonOn');
+		document.getElementById('button__headline').classList.remove('buttonOn');
+		document.execCommand('fontSize', false, '5');
+	}
+	buttonHeadline.onclick = function(){
+		document.getElementById('button__main_text').classList.remove('buttonOn');
+		document.getElementById('button__headline').classList.add('buttonOn');
+		document.execCommand('fontSize', false, '7');
+	}
+    var filename = "hello.txt";
+    
+    download(filename, text);
+}, false);
 
 </script>
 </body>
