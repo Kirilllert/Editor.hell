@@ -75,3 +75,10 @@ html,body{
 	font-weight: bold;
 	color: white;
 }
+
+.align{
+	background-color: #D6E5F9;
+}
+.align__1{
+	background-image: url(../image/align/left.png);
+}
