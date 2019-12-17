@@ -1,3 +1,3 @@
 # Editor.hell
 
-practic before codex
+Practic before codex
