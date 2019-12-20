@@ -1,6 +1,6 @@
 # Editor.hell
 
 Easy text editor 
-Practic before codex
+Practic before probation at CodeХ
 
 @2019
